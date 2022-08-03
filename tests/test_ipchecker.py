@@ -1,5 +1,6 @@
-from ipchecker import __version__
 
+from ipchecker.main import check_for_conflicts
 
-def test_version():
-    assert __version__ == '0.1.0'
+    
+def test_check_for_conflicts():
+    assert check_for_conflicts() != '0'
