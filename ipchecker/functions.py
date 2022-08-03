@@ -63,8 +63,8 @@ def check_conflicts(subnets, quiet=True):
             rtree.add(cidr)
             
     if len(conflicts) > 0:
-        return 666
-    return 123
+        return {"result":"overlap"}
+    return {"result" :"ok"}
 
 # conflicts = (check_conflicts(["192.168.0.0/20","192.168.1.0/22"]))
 # print(f"\nConflict found : {conflicts}\n")
