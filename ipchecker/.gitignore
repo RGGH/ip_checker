@@ -1,0 +1,5 @@
+.vscode/
+ipchecker.code-workspace
+ipchecker/__pycache__/
+ipchecker/tempCodeRunnerFile.py
+tests/__pycache__/
