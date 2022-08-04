@@ -18,8 +18,8 @@ async function SubmitVars() {
 
   const responseText = await response.text();
   console.log(responseText); // logs 'OK'
-  var x = document.getElementById("answer");  
-  x.style.color = "red"; 
-  x.innerHTML = JSON.stringify(responseText);
-  x.title = "FOOBAR";
+  var index_page = document.getElementById("answer"); 
+  index_page.style.color = "blue"; 
+  if(JSON.stringify(responseText).indexOf('overlap') > -1){index_page.style.color = "red"};
+  index_page.innerHTML = (responseText);
 }
