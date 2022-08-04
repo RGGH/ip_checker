@@ -1,24 +1,29 @@
 """ Updated version of original by fgiuba """
 # https://github.com/fgiuba/ipconflict
 
+
 import os
 import sys
 
-import radix # pip install py-radix
+import radix  # pip install py-radix
 from netaddr import IPRange, IPSet
 from netaddr.core import AddrFormatError
 from tqdm import tqdm
 
 
 def get_ip_set(subnet):
+    """
+    returns an IPset representing the object.
+    :rtype: IPSet
+    """
     try:
         return IPSet([subnet])
     except AddrFormatError:
         try:
-            start, end = subnet.split('-')
+            start, end = subnet.split("-")
             return IPSet(IPRange(start, end))
         except (AddrFormatError, ValueError):
-            print(f'error: invalid subnet format {subnet}')
+            print(f"error: invalid subnet format {subnet}")
             sys.exit(2)
 
 
@@ -27,7 +32,7 @@ def parse_subnet_data(data):
     lines = data.splitlines()
     for line in lines:
         line = line.strip()
-        if line and not line.startswith('#'):
+        if line and not line.startswith("#"):
             subnets.append(line)
     return subnets
 
@@ -42,33 +47,30 @@ def parse_subnet_file(path):
         with open(path) as data:
             return parse_subnet_data(data.read())
     else:
-        print(u'warning: invalid subparamsnets file')
+        print("warning: invalid subparamsnets file")
         return []
 
 
 def check_conflicts(subnets, quiet=True):
     conflicts = []
     rtree = radix.Radix()
-    for idx, subnet_a in tqdm(enumerate(subnets), unit='subnet', total=len(subnets), disable=quiet):
+    for idx, subnet_a in tqdm(
+        enumerate(subnets), unit="subnet", total=len(subnets), disable=quiet
+    ):
         set_a = get_ip_set(subnet_a)
         matched = False
         for cidr in set_a.iter_cidrs():
             cidr = str(cidr)
-            if (rtree.search_covered(cidr) or rtree.search_covering(cidr)) and not matched:
+            if (
+                rtree.search_covered(cidr) or rtree.search_covering(cidr)
+            ) and not matched:
                 for subnet_b in subnets[:idx]:
                     overlapping_ips = set_a & get_ip_set(subnet_b)
                     if overlapping_ips:
                         conflicts.append((subnet_b, subnet_a, overlapping_ips))
                 matched = True
             rtree.add(cidr)
-            
+
     if len(conflicts) > 0:
-        return {"result":"overlap"}
-    return {"result" :"ok"}
-
-# conflicts = (check_conflicts(["192.168.0.0/20","192.168.1.0/22"]))
-# print(f"\nConflict found : {conflicts}\n")
-
-
-
-# https://github.com/fgiuba/ipconflict
+        return {"result": "subnets overlap"}
+    return {"result": "subnets ok"}
