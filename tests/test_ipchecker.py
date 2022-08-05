@@ -1,5 +1,5 @@
 """ Test functions """
-from ipchecker.functions import check_conflicts, get_ip_set
+from app.functions import check_conflicts, get_ip_set
 
 
 def test_check_conflicts():
