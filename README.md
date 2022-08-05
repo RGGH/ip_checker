@@ -16,7 +16,7 @@
 ### How to get and run the image:
     docker pull redandgreen/subnet-api
     docker run -it -p 8000:8000 -p 8080:8080 redandgreen/subnet-api:1
-(where 'redandgreen/subnet-api' is the REPOSITORY and '1' is the TAG):
+<br>(where 'redandgreen/subnet-api' is the REPOSITORY and '1' is the TAG)
 ![img](https://github.com/RGGH/ip_checker/blob/main/misc/docker_run.png) 
 ---
 #### How to access the api and the GUI
