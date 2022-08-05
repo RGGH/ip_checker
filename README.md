@@ -19,7 +19,7 @@
 ###### 'redandgreen/subnet-api' is the REPOSITORY and '1' is the TAG)
 ![img](https://github.com/RGGH/ip_checker/blob/main/misc/docker_run.png) 
 ---
-#### How to access the api and the GUI
+### How to access the api and the GUI
 * Once you are running the docker image: 
 * use http://127.0.0.1:8000/v1 for the api (see screenshot above for how to create the payload)
 * or http://127.0.0.1:8080 in your browser to view the GUI 
