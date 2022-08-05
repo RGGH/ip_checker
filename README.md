@@ -9,6 +9,7 @@
 * Open index.html
   
   see : https://github.com/tiangolo/fastapi#run-it
+  to create your own Docker images check out : https://www.youtube.com/watch?v=p28piYY_wv8&t=9690s
 ---
 ## Try it out in Docker:
 
