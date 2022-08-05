@@ -13,7 +13,8 @@
 ---
 ## Try it out in Docker:
 
-### How to get and run the image (where 'redandgreen/subnet-api' is the REPOSITORY and '1' is the TAG):
+### How to get and run the image:
+<br>(where 'redandgreen/subnet-api' is the REPOSITORY and '1' is the TAG):
 
     docker pull redandgreen/subnet-api
     docker run -it -p 8000:8000 -p 8080:8080 redandgreen/subnet-api:1
