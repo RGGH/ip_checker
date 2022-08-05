@@ -1,6 +1,6 @@
 [![Python application](https://github.com/RGGH/ip_checker/actions/workflows/python-app.yml/badge.svg)](https://github.com/RGGH/ip_checker/actions/workflows/python-app.yml)
 <br>
-# ip_checker
+# ip subnet ovelap checker
 ### FastAPI API checking subnet conflicts
 #### Front end + API
 
