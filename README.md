@@ -19,7 +19,8 @@
     docker run -it -p 8000:8000 -p 8080:8080 redandgreen/subnet-api:1
 ![img](https://github.com/RGGH/ip_checker/blob/main/misc/docker_run.png) 
 ---
-### Run the docker image and use 127.0.0.1:8000/v1 for the api and port 8080 for in your browser
+#### Once you are running the docker image: use 127.0.0.1:8000/v1 for the api
+<br> or localhost:8080 in your browser to view the GUI 
 ---
 ![img1](https://github.com/RGGH/ip_checker/blob/main/misc/ssx.png)
 ![img](https://github.com/RGGH/ip_checker/blob/main/misc/screenshot.png)
