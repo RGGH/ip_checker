@@ -10,6 +10,7 @@
   
   see : https://github.com/tiangolo/fastapi#run-it
 ---
+## Try it out in Docker:
 
 ##### How to get the image (where 'img2' is the image name):
 
