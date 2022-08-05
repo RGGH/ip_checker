@@ -20,8 +20,8 @@
 ![img](https://github.com/RGGH/ip_checker/blob/main/misc/docker_run.png) 
 ---
 ### How to access the api and the GUI
-<br>
-Once you are running the docker image: use 127.0.0.1:8000/v1 for the api
+<br> Once you are running the docker image: 
+<br> use 127.0.0.1:8000/v1 for the api
 <br> or localhost:8080 in your browser to view the GUI 
 ---
 ![img1](https://github.com/RGGH/ip_checker/blob/main/misc/ssx.png)
