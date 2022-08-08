@@ -27,4 +27,4 @@
 ![img1](https://github.com/RGGH/ip_checker/blob/main/misc/ssx.png)
 ![img](https://github.com/RGGH/ip_checker/blob/main/misc/screenshot.png)
 
-playlist :  https://youtube.com/playlist?list=PLKMY3XNPiQ7uJpJ_PmfbnURiXpqL4umPM
+Python 360 FastAPI playlist :  https://youtube.com/playlist?list=PLKMY3XNPiQ7uJpJ_PmfbnURiXpqL4umPM
