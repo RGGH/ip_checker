@@ -21,7 +21,7 @@
 ---
 ### How to access the api and the GUI
 * Once you are running the docker image: 
-* use http://127.0.0.1:8000/v1 for the api (see screenshot above for how to create the payload)
+* use http://127.0.0.1:8000/v1 for the api
 * or http://127.0.0.1:8080 in your browser to view the GUI 
 ---
 ![img1](https://github.com/RGGH/ip_checker/blob/main/misc/ssx.png)
